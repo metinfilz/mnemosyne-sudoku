@@ -1,15 +1,13 @@
+import './index.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import {Provider} from "react-redux";
-import PageRouter from "./pages";
-import {store} from "./store/store";
+
+import { App } from './app';
 
 ReactDOM.render(
-  <React.StrictMode>
-      <Provider store={store}>
-          <PageRouter />
-      </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
 );

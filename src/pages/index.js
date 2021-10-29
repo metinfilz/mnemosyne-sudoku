@@ -1,24 +1,9 @@
-import './index.scss'
+import game from './game'
+import history from './history'
+import main from './main'
+import select from './select'
 
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import GamePage from "./game";
-import SelectPage from "./select";
-import MainPage from "./main";
-import HistoryPage from "./history";
-import HeaderComponent from "../components/page.header";
-
-export default function PageRouter(){
-    return(
-        <Router>
-            <div className="page-container">
-                <HeaderComponent />
-                <Switch>
-                    <Route exact path="/" component={MainPage} />
-                    <Route path="/game" component={GamePage} />
-                    <Route path="/select" component={SelectPage} />
-                    <Route path="/history" component={HistoryPage} />
-                </Switch>
-            </div>
-        </Router>
-    )
-}
+export const GamePage = game
+export const HistoryPage = history
+export const MainPage = main
+export const SelectPage = select

@@ -1,0 +1,14 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow:1
+}
+
+.gap-vertical {
+    grid-row-start: 1;
+    grid-row-end: 12;
+}
+.gap-horizontal {
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
