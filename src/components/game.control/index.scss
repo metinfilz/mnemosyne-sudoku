@@ -30,12 +30,19 @@
 @media only screen and (min-width: 576px) {
   .game-control-container > div {
     border: 0.125em solid #795548;
-    margin: 0.5em
+    margin: 0.5em;
+    cursor: pointer;
   }
   .game-control-container > div:active {
     border: 0.25em solid #795548;
     margin: 0.375em;
   }
+  .hint-given {
+    border: 0.125em solid #795548!important;
+    margin: 0.5em!important;
+    cursor: default!important;
+  }
+
 
   .game-control-container {
     flex-direction: column;

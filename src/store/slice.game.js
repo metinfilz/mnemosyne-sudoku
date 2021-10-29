@@ -93,6 +93,7 @@ export const gameSlice = createSlice({
             if (state.cursor < 0 && !hint) return
             if (isConstant(state.status[state.cursor]) && !hint ) return
             if(hint && !state.hasHinted){
+                if(state.board.filter(i => i !== 0).length === 81) return
                 while(1) {
                     let i = Math.floor(Math.random() * 81)
                     if(state.board[i] === 0){

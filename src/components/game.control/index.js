@@ -1,15 +1,22 @@
 import './index.scss'
-import {useDispatch} from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import {controlAssign} from "../../store/slice.game";
 
 export default function GameControlComponent() {
+    const hintGiven = useSelector(state => state.game.hasHinted)
+
+
     const dispatch = useDispatch()
     return(
         <div>
             <div className="game-control-container">
-                {/*<div onClick={() => dispatch(controlUndo())}>UNDO</div>*/}
                 <div onClick={() => dispatch(controlAssign({number: 0}))}>ERASE</div>
-                <div onClick={() => dispatch(controlAssign({number: 0, hint: true}))}>HINT</div>
+                <div className={hintGiven ? "hint-given" : ""}
+                     onClick={() => !hintGiven ? dispatch(controlAssign({number: 0, hint: true})) : null }>
+                    {hintGiven ? "HINT GIVEN" : "GIVE HINT"}</div>
+
+
+
             </div>
             <div className="game-control-info">
                 <h2>Shortcut's</h2>

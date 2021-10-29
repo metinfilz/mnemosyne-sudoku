@@ -12,6 +12,9 @@ import {
 import { useHistory } from 'react-router-dom';
 
 export default function BoardComponent(){
+
+
+
     const pause = useSelector(state => state.game.hasPause)
     const finish = useSelector(state => state.game.hasFinish)
     const dispatch = useDispatch()
