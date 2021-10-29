@@ -1,0 +1,95 @@
+@import "./src/common";
+
+.game-cell.r {
+  background: $brown050;
+}
+.game-cell.h {
+  background: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+.game-board-cell {
+  display: flex;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+.game-board-cell:before{
+  content:'';
+  float:left;
+  padding-top:100%;
+}
+
+
+.game-cell {
+  background: white;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  align-items: center;
+  align-content: center;
+}
+.game-cell.c {
+  font-weight: 700;
+  background: rgb(220,220,220);
+  color: rgb(110,110,110);
+}
+.game-cell.s {
+  background: rgb(247, 199, 119);
+  color: white;
+}
+.game-cell.e {
+  font-weight: 700;
+  background: rgb(251,174,187);
+  color: white;
+
+}
+
+.game-cell.p {
+  background: rgb(151, 195, 243);
+  color: white;
+}
+
+.game-cell.c.p{
+  background: rgba(220,220,220, 0.5);
+  color: white;
+}
+.game-cell.e.p {
+  background: rgba(251,174,187, 0.5);
+}
+.game-cell.s.p {
+  background: rgba(247, 199, 119, 0.5);
+}
+.game-cell.e.s {
+  background: rgba(251,174,187, 0.3);
+}
+.game-cell.e.c {
+  color: #3E2723;
+}
+
+
+
+.game-cell.p.r {
+  margin: 0;
+  border: 1px solid black;
+}
+
+
+
+.game-cell {
+  margin: 1px;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0.25em;
+  font-weight: 700;
+  font-size: 1.125em;
+}

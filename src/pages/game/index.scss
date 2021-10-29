@@ -1,0 +1,29 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 576px) {
+  .game-container {
+    flex: 1;
+    font-size: 1.75em;
+  }
+  .game-outer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-evenly;
+  }
+  .game-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}

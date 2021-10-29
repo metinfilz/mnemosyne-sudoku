@@ -1,0 +1,48 @@
+.game-control-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em 1em 0.5em 1em;
+}
+.game-control-container > div {
+  display: flex;
+  width: 4.5em;
+  justify-content: center;
+  align-items: center;
+  border: 0.0625em solid #3E2723;
+  padding: 0.5em 1em;
+  user-select: none;
+}
+
+
+.game-control-info {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin: 1em;
+}
+.game-control-info > p {
+  margin: 0;
+  line-height: 1.5;
+}
+@media only screen and (min-width: 576px) {
+  .game-control-container > div {
+    border: 0.125em solid #795548;
+    margin: 0.5em
+  }
+  .game-control-container > div:active {
+    border: 0.25em solid #795548;
+    margin: 0.375em;
+  }
+
+  .game-control-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .game-control-info {
+    display: flex;
+  }
+}
+

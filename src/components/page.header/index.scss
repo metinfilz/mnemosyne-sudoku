@@ -1,0 +1,32 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em 0.5em;
+  border-bottom: 1px solid rgb(210,210,210);
+  min-width: 350px;
+}
+.header-container > a{
+  display: flex;
+  text-decoration: none;
+}
+
+.header-name {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  margin: 0.125em 0.250em 0.250em;
+  cursor: pointer;
+  font-weight: 700;
+  color: #3E2723
+}
+.header-new-game {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0.125em;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(79,158,227);
+}

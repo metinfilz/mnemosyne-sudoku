@@ -1,0 +1,42 @@
+:root {
+  --game-info-time-icon: ""
+}
+
+.game-info-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 1em 0.5em 1em;
+  user-select: none;
+  font-weight: 700;
+  color: rgb(110,110,110);
+}
+.game-info-title {
+  font-size: 0.750em;
+  align-self: center;
+  align-content: center;
+}
+.game-info-time {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-content: center;
+  margin-left: auto;
+  justify-content: flex-end;
+  font-size: 0.750em;
+  font-weight: 700;
+  color: rgb(110,110,110);
+  cursor: pointer;
+}
+.game-info-time-icon {
+  display: flex;
+  width: 1em;
+  height: 1em;
+  background-color: rgb(190,190,190);
+  border-radius: 50%;
+  margin-top: -1px;
+  margin-left: 0.5em;
+  border: 2px solid rgb(190,190,190);
+  background-image: var(--game-info-time-icon);
+  background-size: cover;
+  background-origin: content-box;
+}
