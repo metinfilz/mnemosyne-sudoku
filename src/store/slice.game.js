@@ -1,37 +1,17 @@
-import {createSlice, current} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 import {
     isConstant,
     isSelected,
     nextMove,
     togglePointed,
-    setSelected,
     setConflict,
     clearConflict,
     clearSelected,
     toggleSelected,
     relationalCells,
     setRelational,
-    clearRelational, solveBoard, setHinted, checkRow, getIndex,
+    clearRelational, solveBoard, setHinted,
 } from '../utils/game';
-import mapDispatchToProps from 'react-redux/lib/connect/mapDispatchToProps';
-
-function isConflicted(val, i, data) {
-    if(val === 0) return false
-    const row = Math.floor(i / 9), column = i % 9
-    const tRow = Math.floor(row / 3), tColumn = Math.floor(column / 3)
-    let stack=[]
-    Array(3).fill(0).map((r, i) => Array(3).fill(0).map((r, j) => {
-        stack.push(data[9*tColumn+27*tRow + j + i*9])
-    }))
-    if(stack.filter(r => r === val).length > 1) {
-        return true
-    }
-    stack = []
-    for(let j =0; j<9; j++){
-        stack.push(data[(row*9)+j], data[9*j+column])
-    }
-    return stack.filter(r => r === val).length > 2
-}
 
 export const gameSlice = createSlice({
     name: 'game',
@@ -109,12 +89,15 @@ export const gameSlice = createSlice({
         },
         controlAssign: (state, action) => {
             const { number, hint } = action.payload
-            if(state.hasPause || (state.cursor < 0) || isConstant(state.status[state.cursor])) return
-            if(hint){
-                if(state.hasHinted) return
+            if (state.hasPause) return
+            if (state.cursor < 0 && !hint) return
+            if (isConstant(state.status[state.cursor]) && !hint ) return
+            if(hint && !state.hasHinted){
                 while(1) {
                     let i = Math.floor(Math.random() * 81)
                     if(state.board[i] === 0){
+                        console.log(state.solution[i])
+
                         state.board[i] = state.solution[i]
                         state.hasHinted = true
                         state.hintId = i
@@ -123,9 +106,9 @@ export const gameSlice = createSlice({
                     }
                 }
                 return
-            } else {
-                state.board[state.cursor] = number
             }
+            if(state.hintId === state.cursor) return
+            state.board[state.cursor] = number
             state.board.map((_,i) => state.status[i] = clearConflict(state.status[i]))
             state.board.map((val, i) => {
                 const chunk = relationalCells(i)

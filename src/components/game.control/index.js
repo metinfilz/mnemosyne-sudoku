@@ -1,6 +1,6 @@
 import './index.scss'
 import {useDispatch} from "react-redux";
-import {controlAssign, controlErase, controlHint, controlUndo, undo} from "../../store/slice.game";
+import {controlAssign} from "../../store/slice.game";
 
 export default function GameControlComponent() {
     const dispatch = useDispatch()

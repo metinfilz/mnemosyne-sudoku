@@ -9,16 +9,16 @@ import { GamePage, HistoryPage, MainPage, SelectPage } from '../pages';
 
 export function App() {
     const store = prepareStore()
-    return(
+    return (
         <Provider store={store}>
             <BrowserRouter>
                 <div className="app-container">
-                    <HeaderComponent />
+                    <HeaderComponent/>
                     <Switch>
-                        <Route exact path="/" component={ MainPage } />
-                        <Route path="/game" component={ GamePage } />
-                        <Route path="/history" component={ HistoryPage } />
-                        <Route path="/select" component={ SelectPage } />
+                        <Route exact path="/" component={MainPage}/>
+                        <Route path="/game" component={GamePage}/>
+                        <Route path="/history" component={HistoryPage}/>
+                        <Route path="/select" component={SelectPage}/>
                     </Switch>
                 </div>
             </BrowserRouter>
