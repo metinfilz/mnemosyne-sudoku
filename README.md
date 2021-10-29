@@ -6,8 +6,8 @@ In the project directory, you can run:
 ### <a href="https://mnemosyne-sudoku.herokuapp.com/">Open on Heroku</a>
 
 ### Game Page
-![alt text](https://github.com/metinfilz/mnemosyne-sudoku/blob/maing/image/game-page.png?raw=true)
+![alt text](https://github.com/metinfilz/mnemosyne-sudoku/blob/main/image/game-page.png?raw=true)
 ### Select Page
-![alt text](https://github.com/metinfilz/mnemosyne-sudoku/blob/maing/image/select-page.png?raw=true)
+![alt text](https://github.com/metinfilz/mnemosyne-sudoku/blob/main/image/select-page.png?raw=true)
 ### History Page
-![alt text](https://github.com/metinfilz/mnemosyne-sudoku/blob/maing/image/history-page.png?raw=true)
+![alt text](https://github.com/metinfilz/mnemosyne-sudoku/blob/main/image/history-page.png?raw=true)
